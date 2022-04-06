@@ -1,0 +1,118 @@
+body {
+  background: rgb(92, 168, 168);
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 50px;
+  padding: 30px;
+  width: 550px;
+  border-radius: 10px;
+}
+h1 {
+  font-weight: bolder;
+  margin-bottom: 0;
+}
+
+#current-date {
+  font-size: 16px;
+  font-weight: lighter;
+  color: white;
+  margin: 1px;
+  padding: 2px;
+}
+
+.enter-city {
+  position: relative;
+  top: 6px;
+  right: 0%;
+}
+
+.btn {
+  position: relative;
+  background: rgb(121, 121, 184);
+  border: none;
+  transition: ease-in-out;
+  transition-duration: 0, 4s;
+}
+
+.btn:hover {
+  background-color: peru;
+}
+
+#current-button {
+  position: relative;
+  background: rgb(121, 121, 184);
+  color: white;
+  border: none;
+  transition: ease-in-out;
+  transition-duration: 0, 4s;
+}
+
+#current-button:hover {
+  background-color: peru;
+}
+
+.currently {
+  font-weight: bolder;
+  margin-top: 5%;
+  margin-bottom: 0%;
+}
+.current-weather-icon {
+  font-size: 50px;
+}
+
+.current-temperature {
+  position: relative;
+  top: 15%;
+  right: 20%;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  position: relative;
+  top: 15%;
+  right: 50%;
+  font-size: 14px;
+}
+
+.card-subtitle {
+  color: rgb(0, 0, 0);
+}
+
+.weather-coming {
+  margin: 1px;
+}
+
+.weather-conditions {
+  position: relative;
+  right: 26%;
+  font-style: italic;
+  color: rgb(224, 224, 224);
+  text-align: right;
+  margin-top: 0;
+}
+
+.forecast-boxes {
+  position: relative;
+  text-align: center;
+  margin-top: 8%;
+}
+
+.days-forecast {
+  font-weight: bolder;
+}
+
+.temp-forecast {
+  font-size: 12px;
+}
