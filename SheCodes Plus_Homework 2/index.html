@@ -18,22 +18,29 @@
     <div class="container">
       <form id="search-form">
         <div class="row">
-          <div class="col-5">
-            <h1 id="city">Perth, WA</h1>
-          </div>
-          <div class="col-5">
+          <div class="col-6">
             <input
-              class="enter-city"
+              class="enter-city w-100"
               type="city"
               placeholder="Enter your city..."
               id="search-city-input"
             />
           </div>
-          <div class="col-2">
-            <input class="btn btn-primary" type="submit" value="search" />
+          <div class="col-3">
+            <input class="btn btn-primary w-100" type="submit" value="Search" />
+          </div>
+          <div class="col-3">
+            <input
+              class="btn btn-primary w-100"
+              id="current-button"
+              type="submit"
+              value="Current"
+            />
           </div>
         </div>
-
+        <div class="col-9">
+          <h1 id="city">Perth</h1>
+        </div>
         <h2 id="current-date"></h2>
 
         <p class="currently">Currently</p>
@@ -49,9 +56,9 @@
           </div>
           <div class="col-5 weather-details">
             <ul>
-              <li id="wind">Wind: 25km/h</li>
-              <li id="precipitation">Precipitation: 50%</li>
-              <li id="humidity">Humidity: 70%</li>
+              <li>Wind: <span id="wind">0</span>km/h</li>
+              <li>Precipitation: <span id="precipitation">0</span>%</li>
+              <li>Humidity: <span id="humidity">0</span>%</li>
             </ul>
           </div>
 
@@ -87,5 +94,7 @@
         </div>
       </form>
     </div>
+    <a href="https://github.com/christierbt/Weather_App">Open Source Code</a>
+    <script src="src/app.js"></script>
   </body>
 </html>
