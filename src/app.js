@@ -27,19 +27,6 @@ let currentDate = document.querySelector("#current-date");
 let currentTime = new Date();
 currentDate.innerHTML = formatDate(currentTime);
 
-// convert to fahrenheit
-
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#current-temp");
-  let currentTemp = temperatureElement.innerHTML;
-
-  temperatureElement.innerHTML = Math.round((celsiusTemperature * 9) / 5 + 32);
-}
-
-let fahreinheitLink = document.querySelector("#fahrenheit-link");
-fahreinheitLink.addEventListener("click", convertToFahrenheit);
-
 // weather update via search button
 function search(city) {
   let apiKey = "4b433d9a7f22e9aa26d3e1760e73b0a6";
@@ -65,7 +52,7 @@ function currentTemperature(response) {
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
 
-  let celsiusTemperature = response.data.main.temp;
+  celsiusTemperature = response.data.main.temp;
 
   let iconElement = document.querySelector("#weather-icon");
   iconElement.setAttribute(
@@ -74,10 +61,21 @@ function currentTemperature(response) {
   );
 }
 
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#current-temp");
+  let currentTemp = temperatureElement.innerHTML;
+
+  temperatureElement.innerHTML = Math.round((celsiusTemperature * 9) / 5 + 32);
+}
+
 let celsiusTemperature = null;
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
+
+let fahreinheitLink = document.querySelector("#fahrenheit-link");
+fahreinheitLink.addEventListener("click", convertToFahrenheit);
 
 // current location weather
 
