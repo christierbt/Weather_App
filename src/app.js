@@ -73,7 +73,7 @@ function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#current-temp");
   temperatureElement = Math.round(celsiusTemperature);
-})
+}
 
 let celsiusTemperature = null;
 
