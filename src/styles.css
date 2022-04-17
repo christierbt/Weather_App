@@ -120,3 +120,7 @@ ul {
 .temp-forecast {
   font-size: 12px;
 }
+
+img {
+  max-width: 20px;
+}
