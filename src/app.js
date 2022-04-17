@@ -27,7 +27,6 @@ let currentDate = document.querySelector("#current-date");
 let currentTime = new Date();
 currentDate.innerHTML = formatDate(currentTime);
 
-// weather update via search button
 function search(city) {
   let apiKey = "4b433d9a7f22e9aa26d3e1760e73b0a6";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -39,6 +38,21 @@ function searchCity(event) {
   let city = document.querySelector("#search-city-input").value;
   search(city);
 }
+
+function searchLocation(position) {
+  let longitude = position.coords.longitude;
+  let latitude = position.coords.latitude;
+  let apiKey = "4b433d9a7f22e9aa26d3e1760e73b0a6";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(currentTemperature);
+}
+
+function displayCurrentData(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+let currentLocationButton = document.querySelector("#current-button");
+currentLocationButton.addEventListener("click", displayCurrentData);
 
 function currentTemperature(response) {
   document.querySelector("h1").innerHTML = response.data.name;
@@ -85,22 +99,5 @@ fahreinheitLink.addEventListener("click", convertToFahrenheit);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
-
-// current location weather
-
-function searchLocation(position) {
-  let longitude = position.coords.longitude;
-  let latitude = position.coords.latitude;
-  let apiKey = "4b433d9a7f22e9aa26d3e1760e73b0a6";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(currentTemperature);
-}
-
-function displayCurrentData(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(searchLocation);
-}
-let currentLocationButton = document.querySelector("#current-button");
-currentLocationButton.addEventListener("click", displayCurrentData);
 
 search("Perth");
