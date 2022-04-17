@@ -109,7 +109,7 @@ ul {
 
 .units {
   position: relative;
-  top: -10%;
+  top: -32px;
 }
 
 #description::first-letter {
