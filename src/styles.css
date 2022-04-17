@@ -74,10 +74,6 @@ h1 {
   font-weight: bold;
 }
 
-#current-temp {
-  font-size: 24px;
-}
-
 a {
   text-decoration: none;
 }
@@ -101,7 +97,6 @@ ul {
 .weather-details {
   position: relative;
   text-align: left;
-  left: 40%;
   color: white;
   margin-top: 0;
 }
