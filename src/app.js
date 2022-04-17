@@ -61,6 +61,8 @@ function currentTemperature(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].description;
 }
 
 let searchForm = document.querySelector("#search-form");
