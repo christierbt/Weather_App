@@ -110,8 +110,8 @@ ul {
 .units {
   position: relative;
   font-size: 16px;
-  top: -32px;
-  right: 15%;
+  top: -40px;
+  right: 20%;
 }
 
 #description::first-letter {
