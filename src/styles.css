@@ -101,6 +101,10 @@ ul {
   margin-top: 0;
 }
 
+#current-temp {
+  font-size: 45px;
+}
+
 #description::first-letter {
   text-transform: capitalize;
 }
