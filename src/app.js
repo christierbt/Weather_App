@@ -66,13 +66,13 @@ function currentTemperature(response) {
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
 
-  celsiusTemperature = response.data.main.temp;
-
   let iconElement = document.querySelector("#weather-icon");
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  celsiusTemperature = response.data.main.temp;
 }
 
 function convertToFahrenheit(event) {
