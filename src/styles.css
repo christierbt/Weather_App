@@ -42,7 +42,7 @@ h1 {
 }
 
 .btn:hover {
-  background-color: peru;
+  background-color: rgb(243, 183, 123);
 }
 
 #current-button {
@@ -55,14 +55,16 @@ h1 {
 }
 
 #current-button:hover {
-  background-color: peru;
+  background-color: rgb(243, 183, 123);
 }
 
-.currently {
-  font-weight: bolder;
-  margin-top: 5%;
-  margin-bottom: 0%;
+#description {
+  position: relative;
+  text-align: left;
+  color: white;
+  margin-top: 0;
 }
+
 #weather-icon {
   font-size: 50px;
   position: relative;
