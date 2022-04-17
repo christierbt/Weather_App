@@ -103,6 +103,13 @@ ul {
 
 #current-temp {
   font-size: 45px;
+  font-weight: lighter;
+  line-height: 1;
+}
+
+.units {
+  position: relative;
+  top: -10%;
 }
 
 #description::first-letter {
