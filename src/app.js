@@ -33,7 +33,8 @@ function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#current-temp");
   let currentTemp = temperatureElement.innerHTML;
-  temperatureElement.innerHTML = Math.round((currentTemp * 9) / 5 + 32);
+
+  temperatureElement.innerHTML = Math.round((celsiusTemperature * 9) / 5 + 32);
 }
 
 let fahreinheitLink = document.querySelector("#fahrenheit-link");
@@ -64,12 +65,16 @@ function currentTemperature(response) {
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
 
+  let celsiusTemperature = response.data.main.temp;
+
   let iconElement = document.querySelector("#weather-icon");
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
+
+let celsiusTemperature = null;
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
