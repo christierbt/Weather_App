@@ -103,6 +103,10 @@ ul {
   margin-top: 0;
 }
 
+#description {
+  text-transform: capitalize;
+}
+
 .forecast-boxes {
   position: relative;
   text-align: center;
