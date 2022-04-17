@@ -94,9 +94,9 @@ ul {
   margin: 1px;
 }
 
-.weather-conditions {
+.weather-details {
   position: relative;
-  right: 26%;
+  right: 50%;
   font-style: italic;
   color: rgb(224, 224, 224);
   text-align: right;
@@ -119,8 +119,4 @@ ul {
 
 .temp-forecast {
   font-size: 12px;
-}
-
-img {
-  max-width: 20px;
 }
