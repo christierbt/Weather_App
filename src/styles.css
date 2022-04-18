@@ -140,9 +140,14 @@ ul {
 .temp-forecast {
   font-size: 12px;
 }
+
+.temp-forecast-min {
+  opacity: 0.5;
+}
+
 .source-code {
   font-size: 12px;
   font-weight: lighter;
   position: relative;
-  bottom: -60px;
+  bottom: -75px;
 }
