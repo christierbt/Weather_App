@@ -127,7 +127,7 @@ ul {
   text-transform: capitalize;
 }
 
-.forecast-boxes {
+.weather-forecast {
   position: relative;
   text-align: center;
   margin-top: 4%;
