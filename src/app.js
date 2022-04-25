@@ -30,7 +30,7 @@ currentDate.innerHTML = formatDate(currentTime);
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = `<div class="row>`;
+  let forecastHTML = `<div class="row">`;
   let days = ["Tue", "Wed", "Thu", "Fri"];
 
   days.forEach(function (day) {
@@ -47,7 +47,8 @@ function displayForecast() {
                   <span class="temp-forecast-max">30°</span>
                   <span class="temp-forecast-min">19°</span>
             </div>
-          </div>`;
+          </div>
+    `;
   });
 
   forecastHTML = forecastHTML + `</div>`;
