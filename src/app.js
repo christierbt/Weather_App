@@ -37,17 +37,17 @@ function displayForecast() {
     forecastHTML =
       forecastHTML +
       `<div class="col-2">
-                <div class="days-forecast">${day}</div>
-                <img
+          <div class="days-forecast">${day}</div>
+            <img
           src="http://openweathermap.org/img/wn/50d@2x.png"
           alt=""
           width="42"
         />
-                <div class="temp-forecast"><span class="temp-forecast-max">30°</span>
+            <div class="temp-forecast">
+                  <span class="temp-forecast-max">30°</span>
                   <span class="temp-forecast-min">19°</span>
-                </div>
-                </div>
-              </div>`;
+            </div>
+          </div>`;
   });
 
   forecastHTML = forecastHTML + `</div>`;
