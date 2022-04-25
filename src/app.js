@@ -27,7 +27,8 @@ let currentDate = document.querySelector("#current-date");
 let currentTime = new Date();
 currentDate.innerHTML = formatDate(currentTime);
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -83,6 +84,12 @@ function displayCurrentData(event) {
 let currentLocationButton = document.querySelector("#current-button");
 currentLocationButton.addEventListener("click", displayCurrentData);
 
+function getForecast(coordinates) {
+  let apiKey = "4b433d9a7f22e9aa26d3e1760e73b0a6";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiURL).then(displayForecast);
+}
+
 function currentTemperature(response) {
   document.querySelector("h1").innerHTML = response.data.name;
   document.querySelector("#current-temp").innerHTML = Math.round(
@@ -102,6 +109,8 @@ function currentTemperature(response) {
   );
 
   celsiusTemperature = response.data.main.temp;
+
+  getForecast(response.data.coord);
 }
 
 function convertToFahrenheit(event) {
@@ -130,4 +139,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
 search("Perth");
-displayForecast();
