@@ -127,29 +127,7 @@ function currentTemperature(response) {
   getForecast(response.data.coord);
 }
 
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#current-temp");
-  let currentTemp = temperatureElement.innerHTML;
-
-  temperatureElement.innerHTML = Math.round((celsiusTemperature * 9) / 5 + 32);
-}
-
-function convertToCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#current-temp");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsiusTemperature = null;
-
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
-
-let fahreinheitLink = document.querySelector("#fahrenheit-link");
-fahreinheitLink.addEventListener("click", convertToFahrenheit);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
 
 search("Perth");
