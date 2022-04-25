@@ -87,7 +87,7 @@ currentLocationButton.addEventListener("click", displayCurrentData);
 function getForecast(coordinates) {
   let apiKey = "4b433d9a7f22e9aa26d3e1760e73b0a6";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  axios.get(apiURL).then(displayForecast);
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function currentTemperature(response) {
